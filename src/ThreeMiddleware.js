@@ -26,6 +26,11 @@ let container = new ThreeMeshUI.Block();
 let text = new ThreeMeshUI.Text();
 let grid = new THREE.LineSegments();
 
+let light_1 = new THREE.PointLight(0xffffff,3)
+let light_2 = new THREE.PointLight(0xffffff,3)
+let light_3 = new THREE.PointLight(0xffffff,3)
+let light_4 = new THREE.PointLight(0xffffff,3)
+
 const createEnvironment = () => {
   console.log("create environment");
  
@@ -35,10 +40,13 @@ const createEnvironment = () => {
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener('click', onClick);
   scene.add( axesHelper );
+  scene.add(light_1);
+  scene.add(light_2);
+  scene.add(light_3);
+  scene.add(light_4);
 
   init();
 }
-
 
 const init = () => {
   if (!frameId) {
@@ -68,6 +76,10 @@ const init = () => {
   scene.add( container );
 
 
+  light_1.position.set(0,3,5);
+  light_2.position.set(5,1,0);
+  light_3.position.set(0,1,-5);
+  light_4.position.set(-5,3,0);
 
 
   grid = new THREE.LineSegments(

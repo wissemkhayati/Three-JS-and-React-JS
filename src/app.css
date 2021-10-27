@@ -1,0 +1,13 @@
+.redball {
+	width: 150px; height: 150px;
+	border: 2px solid #000;
+	background: red;
+	border-radius: 50%;
+	position: absolute;
+	animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+	0% { top: 300px; }
+	100% { top: 0; }
+}

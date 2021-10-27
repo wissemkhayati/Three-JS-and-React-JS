@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { createEnvironment, createBin, showCategory, changeMaterial } from "./ThreeMiddleware";
+import "./app.css";
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
       <button > -------------- </button>
       <button onClick={()=>material(true)}> wireframe</button>
       <button onClick={()=>material(false)}> colored</button>
+      <div className="redball"></div>
     </div>
   );
 }
